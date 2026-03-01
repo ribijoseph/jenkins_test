@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+
+  dev:
+    build: .
+    container_name: dev-app
+    ports:
+      - "5001:5000"
+    environment:
+      - ENV=dev
+  
+  qa:
+    build: .
+    container_name: qa-app
+    ports:
+      - "5002:5000"
+    environment:
+      - ENV=qa
+  
+  uat:
+    build: .
+    container_name: uat-app
+    ports:
+      - "5003:5000"
+    environment:
+      -  ENV=uat
+
